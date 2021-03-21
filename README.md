@@ -100,4 +100,17 @@ We chose this approach as this being a large multi-class problem, where differen
 
 ---
 
+## Files
+---
 
+1. Dog_Breed_Classification_using_VGG16_Resnet50_MobileNet.ipynb: showcases all our findings & code
+2. Dog Breeds Profile Report.html: Pandas profiling report that highlights EDA findings on the dataset
+3. German_Shepherd_-_DSC_0346_(10096362833).jpg: Sample image used to test our model
+4. dogbreed_cnn.h5: Final model weights
+
+All documentations & findinds are listed in:
+1. Synopsis
+2. Interim Report
+3. Final Report: This also contains a presentation to demonstrate our findings & methodology, as well as the Final Report.
+
+---
