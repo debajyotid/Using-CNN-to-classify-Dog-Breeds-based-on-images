@@ -29,6 +29,7 @@ labels.csv - mapped the breeds, for the images in the train set, with the corres
 Kaggle authorities extend their gratitude to the creators of the Stanford Dogs Dataset, which made this competition possible: Aditya Khosla, Nityananda Jayadevaprakash, Bangpeng Yao, and Fei-Fei Li.
 
 We have tried 3 types of image resizing techniques before feeding to our models:
+
 1.128X128X1
 2.128X128X3
 3.224X224X3
@@ -72,12 +73,19 @@ In case of Image Augmentation, the augmented images were also generated in batch
 When using Image Augmentation, we have referred to a standard set of augmentation techniques as below:
 
 i. width_shift_range=0.2,
+
 ii. height_shift_range=0.2,
+
 iii. rotation_range=30,
+
 iv. shear_range=0.2,
+
 v. zoom_range=0.2,
+
 vi. horizontal_flip=True,
+
 vii. vertical_flip=True,
+
 viii. fill_mode='nearest'
 
 All models were trained for 20 iterations. We also used call-backs like ModelCheckpoint & ReduceLROnPlateau
@@ -89,24 +97,6 @@ All models were trained for 20 iterations. We also used call-backs like ModelChe
 
 We have referred to Top-5 Accuracy & ROC-AUC Score to evaluate the model performance across 120 dog breed classes. 
 We chose this approach as this being a large multi-class problem, where different classes didn’t find equal representation in the training dataset, we felt looking at traditional evaluation metrics like Accuracy, Precision, Recall, F1-Score wouldn’t offer a truly complete picture. 
-
----
-
-## Results
----
-Model	Model Name	                                          Image Augmentation (Y/N)	Training Accuracy	Validation Accuracy	Val Top 5 Accuracy	ROC-AUC Score
-1	    Custom CNN Architecture	                              N	                        1.23%	            1.08%	              5.23%	              0.50
-2	    Custom CNN Architecture	                              Y	                        1.24%	            0.99%	              4.86%	              0.49
-3	    VGG-16 with pre-trained weights	                      N	                        99.96%	          29.34%	            60.54%	            0.92
-4	    VGG-16 with pre-trained weights	                      N	                        54.76%	          25.23%	            53.89%	            0.92
-5	    VGG-16 with pre-trained weights	                      Y	                        21.35%	          19.39%	            47.72%	            0.89
-6	    Resnet-50 using pre-trained weights	                  N	                        1.15%	            0.75%	              5.05%	              0.5
-7	    Resnet-50 using pre-trained weights	                  Y	                        1.09%	            0.76%	              5.04%	              0.5
-8	    Resnet-50 with all layers trainable	                  N	                        5.92%	            4.80%	              18.75%	            0.77
-9	    Mobilenet V2 with pre-trained weights	                N	                        99.96%	          71.40%	            93.65%	            0.99
-10	  Mobilenet V2 with pre-trained weights	                Y	                        74.9%	            65.78%	            91.53%	            0.99
-11	  Mobilenet V2 with pre-trained weights on 90:10 split	N	                        98.9%	            67.10%	            91.2%	              0.99
-12	  Mobilenet V2 with pre-trained weights on 90:10 split	Y	                        71.62%	          65.12%	            91.94%	            0.99
 
 ---
 
