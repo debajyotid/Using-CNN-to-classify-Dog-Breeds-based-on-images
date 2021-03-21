@@ -107,6 +107,7 @@ We chose this approach as this being a large multi-class problem, where differen
 2. Dog Breeds Profile Report.html: Pandas profiling report that highlights EDA findings on the dataset
 3. German_Shepherd_-_DSC_0346_(10096362833).jpg: Sample image used to test our model
 4. dogbreed_cnn.h5: Final model weights
+5. vgg16_weights_tf_dim_ordering_tf_kernels_notop.h5: Pre-trained VGG16 model weights
 
 All documentations & findinds are listed in:
 1. Synopsis
